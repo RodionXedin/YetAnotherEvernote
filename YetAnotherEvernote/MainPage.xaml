@@ -8,10 +8,14 @@
     mc:Ignorable="d">
 
     <Grid Background="#fff">
-        <TextBlock HorizontalAlignment="Left" Margin="49,30,0,0" TextWrapping="Wrap" Text="MetroNote" VerticalAlignment="Top" Height="81" Width="449" Foreground="Black" FontSize="70" />
-        <ListView Name="notepades" HorizontalAlignment="Left" Height="548" Margin="49,163,0,0" VerticalAlignment="Top" Width="350"/>
-        <GridView Name="notes" HorizontalAlignment="Left" Margin="429,163,0,0" VerticalAlignment="Top" Width="867" Height="548" Background="#eee"/>
-        <Button Name ="AddButton" Background ="LightGreen" Foreground="Black" Content="Add" HorizontalAlignment="Left" Margin="900,55,0,0" VerticalAlignment="Top" Height="56" Width="132" Click="AddButton_Click"/>
-        <TextBox Name ="NotePadAdd" HorizontalAlignment="Left" Margin="429,55,0,0" Background ="WhiteSmoke" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="56" Width="449"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="212*"/>
+            <ColumnDefinition Width="471*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="49,42,0,0" TextWrapping="Wrap" Text="MetroNote" VerticalAlignment="Top" Height="84" Width="449" Foreground="Black" FontSize="70" Grid.ColumnSpan="2" />
+        <ListView Name="notepades" HorizontalAlignment="Left" Height="564" Margin="49,147,0,0" VerticalAlignment="Top" Width="350"/>
+        <GridView Name="notes" HorizontalAlignment="Left" Margin="5,147,0,0" VerticalAlignment="Top" Width="867" Height="564" Background="#eee" Grid.Column="1"/>
+        <Button FontSize="18" Name ="AddButton" Background ="LightGreen" Foreground="Black" Content="ADD" HorizontalAlignment="Left" Margin="740.119,55,0,0" VerticalAlignment="Top" Height="56" Width="132" Click="AddButton_Click" Grid.Column="1"/>
+        <TextBox FontSize="28" Name ="NotePadAdd" HorizontalAlignment="Left" Margin="5.119,55,0,0" Background ="WhiteSmoke" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="56" Width="730" Grid.Column="1"/>
     </Grid>
 </Page>

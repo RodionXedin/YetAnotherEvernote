@@ -37,6 +37,7 @@ namespace YetAnotherEvernote
                 if (CurrNote.title == "+")
                     CurrNote.title = "New Title";
                 NoteAct.Text = CurrNote.content;
+                //NoteAct.Document.SetText(new Windows.UI.Text.TextSetOptions(), CurrNote.content);
                 NoteName.Text = CurrNote.title;
             }
             AppTitle.Text = notepad;
@@ -77,6 +78,7 @@ namespace YetAnotherEvernote
                 {
                     NoteName.Text = note.title;
                     NoteAct.Text = note.content;
+                    //NoteAct.Document.SetText(new Windows.UI.Text.TextSetOptions(), note.content);
                     NoteChoosen = true;
                     CurrNote = note;
                 }
@@ -89,8 +91,8 @@ namespace YetAnotherEvernote
         private Button createNoteButton(String title, String content)
         {
             Button button = new Button();
-            button.Width = 200;
-            button.Height = 200;
+            button.Width = 390;
+            button.Height = 100;
             button.Content = title.ToUpper();
             button.FontSize = 16;
             
@@ -112,6 +114,9 @@ namespace YetAnotherEvernote
             if (CurrNote != null)
             {
                 CurrNote.content = NoteAct.Text;
+                //String str;
+                //NoteAct.Document.GetText(new Windows.UI.Text.TextGetOptions(), out str);
+                //CurrNote.content = str;
                 foreach (Note note in ourNotes)
                 {
                     if (CurrNote.id == note.id)
@@ -185,6 +190,7 @@ namespace YetAnotherEvernote
             }
 
         }
+
 
         private void GoBack_Click(object sender, RoutedEventArgs e)
         {

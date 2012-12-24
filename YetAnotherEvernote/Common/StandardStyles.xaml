@@ -1424,6 +1424,16 @@
         BackButtonStyle is used to style a Button for use in the title area of a page.  Margins appropriate for
         the conventional page layout are included as part of the style.
     -->
+
+    <SolidColorBrush x:Key="BackButtonBackgroundThemeBrush" Color="#fff"/>
+    <SolidColorBrush x:Key="BackButtonForegroundThemeBrush" Color="#000"/>
+    <SolidColorBrush x:Key="BackButtonPressedForegroundThemeBrush" Color="#33CC66"/>
+    <SolidColorBrush x:Key="BackButtonPointerOverBackgroundThemeBrush" Color="#fff"/>
+    <SolidColorBrush x:Key="BackButtonPointerOverForegroundThemeBrush" Color="#33CC66"/>
+    <SolidColorBrush x:Key="ListViewItemPlaceholderBackgroundThemeBrush" Color="#000"/>
+    
+    
+    
     <Style x:Key="BackButtonStyle" TargetType="Button">
         <Setter Property="MinWidth" Value="0"/>
         <Setter Property="Width" Value="48"/>
@@ -1540,6 +1550,9 @@
         The obvious duplication here is necessary as the glyphs used in snapped are not merely smaller versions of the same
         glyph but are actually distinct.
     -->
+
+  
+
     <Style x:Key="SnappedBackButtonStyle" TargetType="Button">
         <Setter Property="MinWidth" Value="0"/>
         <Setter Property="Margin" Value="20,0,0,0"/>

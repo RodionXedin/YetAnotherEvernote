@@ -44,7 +44,7 @@ namespace YetAnotherEvernote
             Button item = (Button)sender;
             SolidColorBrush brush = new SolidColorBrush();
             brush.Color = Windows.UI.Colors.Green;
-            item.Background = brush;
+            //item.Background = brush;
             if (!sender.Equals(LastSender))
                 if (notes.Items.Count == 0)
                 {
@@ -122,7 +122,7 @@ namespace YetAnotherEvernote
             button.Background = brush;
 
             button.PointerMoved += new PointerEventHandler(buttonPointerEntered);
-            button.PointerExited += new PointerEventHandler(buttonPointerLeave);
+            //button.PointerExited += new PointerEventHandler(buttonPointerLeave);
             //button.Click += new RoutedEventHandler(buttonClick);
             //button.DragLeave += new DragEventHandler(buttonClick);
 
