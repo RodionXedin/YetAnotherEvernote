@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="YetAnotherEvernote.NoteContent"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:YetAnotherEvernote"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#fff">
+       <TextBlock Name ="AppTitle" HorizontalAlignment="Left" Margin="49,30,0,0" TextWrapping="Wrap" Text="MetroNote" VerticalAlignment="Top" Height="81" Width="449" Foreground="Black" FontSize="70" />
+        <ListView Name="notes" HorizontalAlignment="Left" Height="548" Margin="49,163,0,0" VerticalAlignment="Top" Width="350"/>
+        <TextBox Name  ="NoteAct" Background="WhiteSmoke" HorizontalAlignment="Left" Margin="466,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="588" Width="856" TextChanged="NoteAct_TextChanged"/>
+        <Button Name ="NoteAddButton"  Content="Add Note" Background="LightGreen" Foreground="Black" HorizontalAlignment="Left" Margin="1006,59,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.496,0.542" Height="51" Width="150" Click="NoteAddButton_Click"/>
+        <TextBox Name ="NoteName" Background ="WhiteSmoke" HorizontalAlignment="Left" Margin="466,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="501" Height="50" TextChanged="NoteName_TextChanged"/>
+        <Button Name ="DeleteButton" Background="LightGreen" Foreground="Black" Content="Delete" HorizontalAlignment="Left" Margin="1183,60,0,0" VerticalAlignment="Top" Height="50" Width="139" Click="DeleteButton_Click"/>
+        <Button Name ="GoBack"  Content="Back" Background="LightGreen" Foreground="Black" HorizontalAlignment="Left" Margin="49,116,0,0" VerticalAlignment="Top" Height="39" Width="133" Click="GoBack_Click"/>
+        <TextBox Name ="SaveAnnouncer" Background ="Aqua" Foreground="Black" IsReadOnly="True" HorizontalAlignment="Left" Margin="466,116,0,0" TextWrapping="Wrap" Visibility="Collapsed"  Text="" VerticalAlignment="Top" Height="14" Width="151"/>
+    </Grid>
+</Page>
