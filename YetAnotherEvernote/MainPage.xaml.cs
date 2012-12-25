@@ -177,11 +177,11 @@ namespace YetAnotherEvernote
             //notepadRepository.addNote(new Note("testnotepad1", "testTitle2", "testContent2", DateTime.Today));
             //notepadRepository.addNote(new Note("testnotepad2", "testTitle3", "testContent3", DateTime.Today));
             notepadRepository.Save();
-            foreach (string notepad in notepadRepository.GetNotepadesNames())
+           /* foreach (string notepad in notepadRepository.GetNotepadesNames())
             {
                 notepades.Items.Add(createNotepadeButton(notepad));
                 
-            }
+            }*/
             
             
             /*

@@ -76,14 +76,29 @@ namespace YetAnotherEvernote
             {
                 if ((note.title.Equals(item.Content.ToString().ToLower())) && NoteChoosen == false)
                 {
-                    NoteName.Text = note.title;
-                    NoteAct.Text = note.content;
-                    //NoteAct.Document.SetText(new Windows.UI.Text.TextSetOptions(), note.content);
-                    NoteChoosen = true;
-                    CurrNote = note;
+                    if (CurrNote != null)
+                    {
+                        if (CurrNote.id != note.id)
+                        {
+                            NoteChoosen = true;
+                            CurrNote = note;
+                            NoteName.Text = note.title;
+                            NoteAct.Text = note.content;
+                            item.Content = CurrNote.title.ToUpper();
+                            //NoteAct.Document.SetText(new Windows.UI.Text.TextSetOptions(), note.content);
+                        }
+                    }
+                    else
+                    {
+                        NoteChoosen = true;
+                        CurrNote = note;
+                        NoteName.Text = note.title;
+                        NoteAct.Text = note.content;
+                        item.Content = CurrNote.title.ToUpper();
+                    }
                 }
             }
-            item.Content = CurrNote.title.ToUpper();
+            
             //NoteContent noteContent = new NoteContent(item1);
             //Window.Current.Content = new NoteContent(item1);
 

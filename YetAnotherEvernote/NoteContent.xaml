@@ -8,13 +8,13 @@
     mc:Ignorable="d">
 
     <Grid Background="#fff">
-        <Button x:Name="backButton" Click="GoBack_Click" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}" Margin="49,0,0,661"/>
+        <Button x:Name="backButton" Click="GoBack_Click" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}" Margin="10,0,0,710"/>
        <TextBlock Name ="AppTitle" HorizontalAlignment="Left" Margin="118,46,0,0" TextWrapping="Wrap" Text="MetroNote" VerticalAlignment="Top" Height="95" Width="449" Foreground="Black" FontSize="65" />
         <ListView Name="notes" HorizontalAlignment="Left" Height="565" Margin="49,146,0,0" VerticalAlignment="Top" Width="390"/>
         <Button Name ="NoteAddButton" FontSize="18"  Content="ADD NOTE" Background="LightGreen" Foreground="Black" HorizontalAlignment="Left" Margin="1028,59,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.496,0.542" Height="54" Width="150" Click="NoteAddButton_Click"/>
         <TextBox Name ="NoteName" FontSize="26" Background ="WhiteSmoke" HorizontalAlignment="Left" Margin="466,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="557" Height="50" TextChanged="NoteName_TextChanged"/>
         <Button Name ="DeleteButton" FontSize="18" Background="RosyBrown" Foreground="Black" Content="REMOVE" HorizontalAlignment="Left" Margin="1183,59,0,0" VerticalAlignment="Top" Height="54" Width="139" Click="DeleteButton_Click"/>
         <TextBox Name ="SaveAnnouncer" Background ="Aqua" Foreground="Black" IsReadOnly="True" HorizontalAlignment="Left" Margin="466,116,0,0" TextWrapping="Wrap" Visibility="Collapsed"  Text="" VerticalAlignment="Top" Height="14" Width="151"/>
-        <TextBox Name="NoteAct" Background="WhiteSmoke" HorizontalAlignment="Left" Margin="466,146,0,0" VerticalAlignment="Top" TextChanged="NoteAct_TextChanged" Width="856" Height="565" />
+        <TextBox Name="NoteAct" Background="WhiteSmoke" HorizontalAlignment="Left" Margin="439,146,0,0" VerticalAlignment="Top" TextChanged="NoteAct_TextChanged" Width="883" Height="565" RenderTransformOrigin="0.966,0.945" />
     </Grid>
 </Page>
